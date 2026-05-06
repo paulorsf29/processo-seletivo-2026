@@ -61,3 +61,7 @@ O uso de ferramentas de IA generativa é permitido — faz parte do dia a dia do
 ---
 
 A todos, desejamos um bom projeto, e boa sorte.
+
+Atenciosamente,
+
+Caio Johnston, Gabriel Mattos, Giovanni Braga, e Isaac Elgrably.
