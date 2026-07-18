@@ -1,5 +1,12 @@
 # FestWear
 
+Processo Seletivo LAPES 2026 — Trilha de Desenvolvimento (Mini E-commerce).
+
+**Candidato:** Paulo Ricardo Silva Fonseca
+**Contato:** paulorsf29@gmail.com · WhatsApp (91) 98449-4995
+
+---
+
 E-commerce de camisas de time: API REST (Spring Boot) + interface web (React), com os domínios de
 autenticação, catálogo, carrinho, checkout/pedidos e cupons de desconto, além dos requisitos
 não-funcionais do desafio (migrations, controle de concorrência, cache, rate limiting, logs
