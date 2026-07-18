@@ -41,6 +41,9 @@ class OrderServiceTest {
     @Mock
     private CouponService couponService;
 
+    @Mock
+    private ProductService productService;
+
     @InjectMocks
     private OrderService orderService;
 

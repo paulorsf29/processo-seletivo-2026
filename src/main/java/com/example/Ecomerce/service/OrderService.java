@@ -39,6 +39,7 @@ public class OrderService {
     private final ProductRepository productRepository;
     private final CartService cartService;
     private final CouponService couponService;
+    private final ProductService productService;
 
     @Transactional
     public OrderResponse createOrder(User customer, OrderRequest request) {
@@ -99,6 +100,8 @@ public class OrderService {
         }
 
         order.setTotalAmount(subtotal.subtract(discount));
+
+        productService.evictCache();
 
         Order saved = orderRepository.save(order);
 
@@ -173,6 +176,7 @@ public class OrderService {
             product.setStockQuantity(product.getStockQuantity() + item.getQuantity());
             productRepository.save(product);
         }
+        productService.evictCache();
     }
 
     Order findEntity(Long id) {

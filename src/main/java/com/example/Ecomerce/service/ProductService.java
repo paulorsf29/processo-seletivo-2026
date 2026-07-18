@@ -87,4 +87,11 @@ public class ProductService {
         return productRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Produto não encontrado: " + id));
     }
+
+    /** Stock changes during checkout/cancellation go straight through the repository (see
+     * OrderService), bypassing this service's own cache eviction — call this afterwards so the
+     * catalog cache doesn't serve stale stock quantities. */
+    @CacheEvict(value = "products", allEntries = true)
+    public void evictCache() {
+    }
 }
